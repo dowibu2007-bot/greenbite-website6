@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bảng tính Calo & Tra cứu dinh dưỡng sản phẩm GreenBite — Tự phối bữa ăn Eat Clean, tính toán Macro Protein, Carbs, Fat và kiểm soát calo khoa học.">
+    <meta name="keywords" content="bảng calo, tính calo granola, calo biscotti, calo hạt dinh dưỡng, macro eat clean, greenbite calo">
+    <meta name="author" content="GreenBite">
+    <title>Bảng Tính Calo & Tra Cứu Dinh Dưỡng — GreenBite</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Preconnect & Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════════════════════
+       HEADER / NAVIGATION
+       ════════════════════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo" id="logo" aria-label="GreenBite Trang chủ">
+                <img src="logo.jpg" alt="GreenBite Logo" class="logo__img">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav__list" id="nav-list">
+                    <li><a href="index.html#home" class="nav__link">Trang chủ</a></li>
+                    <li><a href="index.html#products" class="nav__link">Sản phẩm</a></li>
+                    <li><a href="calo.html" class="nav__link active">Bảng Calo</a></li>
+                    <li><a href="index.html#about" class="nav__link">Về chúng tôi</a></li>
+                    <li><a href="index.html#contact" class="nav__link">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header__actions">
+                <button class="search-toggle" id="search-toggle" aria-label="Tìm kiếm">🔍</button>
+                <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+                    🛒
+                    <span class="cart-btn__count" id="cart-count">0</span>
+                </button>
+                <button class="user-btn" id="user-btn" aria-label="Tài khoản">👤</button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-overlay__close" id="search-close" aria-label="Đóng">✕</button>
+        <div class="search-overlay__inner">
+            <input type="text" class="search-overlay__input" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+       HERO: CALORIE & NUTRITION
+       ════════════════════════════════════════════════════════ -->
+    <section class="calo-hero">
+        <div class="container">
+            <div class="calo-hero__badge">
+                <span>🍃</span> Dinh Dưỡng Chuẩn Khoa Học
+            </div>
+            <h1 class="calo-hero__title">
+                Bảng Tính & Tra Cứu Calo<br><em>Sản Phẩm GreenBite</em>
+            </h1>
+            <p class="calo-hero__desc">
+                Tự do phối hợp các món ăn vặt lành mạnh, kiểm soát chính xác lượng Calo & Macro (Protein, Carbs, Fat, Fiber) cho bữa ăn Eat Clean chuẩn mục tiêu tăng cơ, giảm mỡ của bạn.
+            </p>
+            <div class="calo-quick-nav">
+                <a href="#builder" class="calo-quick-nav__link">🥗 Tự phối bữa ăn & Tính Calo</a>
+                <a href="#nutrition-facts" class="calo-quick-nav__link">📋 Bảng tra cứu 6 sản phẩm</a>
+                <a href="#meal-plans" class="calo-quick-nav__link">⭐ Thực đơn mẫu chuẩn Calo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       SECTION 1: INTERACTIVE MEAL & PRODUCT CALORIE BUILDER
+       ════════════════════════════════════════════════════════ -->
+    <section class="section-padding" id="builder">
+        <div class="container">
+            <h2 class="section-title">🥗 Tự Tạo Khẩu Phần & Tính Calo Bữa Ăn</h2>
+            <p class="section-subtitle">
+                Tick chọn các sản phẩm bạn muốn ăn và điều chỉnh khối lượng — Bộ tính sẽ phân tích chi tiết lượng Calo và tỷ lệ Macro ngay lập tức!
+            </p>
+
+            <div class="builder-layout">
+                <!-- Selection Column -->
+                <div class="builder-selection">
+                    <!-- Group 1: GreenBite Products -->
+                    <div class="builder-group">
+                        <h3 class="builder-group__title">
+                            🌿 Sản phẩm dinh dưỡng GreenBite
+                        </h3>
+                        <p class="builder-group__subtitle">Chọn các món bạn muốn thêm vào bữa ăn hôm nay:</p>
+                        <div class="builder-cards-grid" id="builder-products-list">
+                            <!-- Populated dynamically by calo.js -->
+                        </div>
+                    </div>
+
+                    <!-- Group 2: Healthy Add-on Toppings -->
+                    <div class="builder-group">
+                        <h3 class="builder-group__title">
+                            🍓 Món ăn kèm lành mạnh (Gợi ý phối hợp)
+                        </h3>
+                        <p class="builder-group__subtitle">Kết hợp thêm cùng sữa hạt, sữa chua hoặc hoa quả tươi:</p>
+                        <div class="builder-cards-grid" id="builder-toppings-list">
+                            <!-- Populated dynamically by calo.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sticky Macro Dashboard -->
+                <div class="macro-dashboard-wrap">
+                    <div class="macro-dashboard">
+                        <div class="macro-dashboard__header">
+                            <div class="macro-dashboard__label">Tổng Năng Lượng Khẩu Phần</div>
+                            <div class="macro-dashboard__calories-wrap">
+                                <span class="macro-dashboard__calories" id="macro-total-calories">0</span>
+                                <span class="macro-dashboard__cal-unit">kcal</span>
+                            </div>
+                        </div>
+
+                        <!-- Calorie Goal Target -->
+                        <div class="macro-goal">
+                            <div class="macro-goal__select-row">
+                                <span>🎯 Mục tiêu bữa ăn:</span>
+                                <select class="macro-goal__select" id="macro-goal-select">
+                                    <option value="200">Bữa xế nhẹ nhàng (~200 kcal)</option>
+                                    <option value="350" selected>Bữa sáng Eat Clean (~350 kcal)</option>
+                                    <option value="450">Bữa phụ trước tập Gym (~450 kcal)</option>
+                                    <option value="550">Bữa chính giàu Protein (~550 kcal)</option>
+                                </select>
+                            </div>
+                            <div class="macro-goal__bar-bg">
+                                <div class="macro-goal__bar-fill" id="macro-goal-fill" style="width: 0%;"></div>
+                            </div>
+                            <div class="macro-goal__status" id="macro-goal-status">Đang tính toán...</div>
+                        </div>
+
+                        <!-- Macro Ratio Distribution Bar -->
+                        <div class="macro-ratio-bar">
+                            <div class="macro-ratio-bar__seg--protein" id="macro-seg-protein" style="width: 33%;" title="Protein"></div>
+                            <div class="macro-ratio-bar__seg--carbs" id="macro-seg-carbs" style="width: 33%;" title="Carbs"></div>
+                            <div class="macro-ratio-bar__seg--fat" id="macro-seg-fat" style="width: 34%;" title="Healthy Fat"></div>
+                        </div>
+
+                        <!-- Macro Grid: 4 Cards -->
+                        <div class="macro-grid">
+                            <div class="macro-card macro-card--protein">
+                                <div class="macro-card__name">🥩 Protein</div>
+                                <div class="macro-card__value" id="macro-val-protein">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-protein">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--carbs">
+                                <div class="macro-card__name">🍞 Carbs (Chậm)</div>
+                                <div class="macro-card__value" id="macro-val-carbs">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-carbs">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--fat">
+                                <div class="macro-card__name">🥑 Chất béo tốt</div>
+                                <div class="macro-card__value" id="macro-val-fat">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-fat">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--fiber">
+                                <div class="macro-card__name">🌾 Chất xơ</div>
+                                <div class="macro-card__value" id="macro-val-fiber">0g</div>
+                                <div class="macro-card__pct">Tốt cho ruột</div>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Actions -->
+                        <div class="macro-dashboard__actions">
+                            <button type="button" class="btn-add-combo" id="btn-add-combo">
+                                🛒 Thêm combo này vào giỏ hàng
+                            </button>
+                            <button type="button" class="btn-reset-builder" id="btn-reset-builder">
+                                🔄 Làm mới bộ tính
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       SECTION 2: DETAILED PRODUCT NUTRITION FACTS (6 SẢN PHẨM)
+       ════════════════════════════════════════════════════════ -->
+    <section class="nutrition-section section-padding" id="nutrition-facts">
+        <div class="container">
+            <h2 class="section-title">📋 Bảng Phân Tích Dinh Dưỡng 6 Dòng Sản Phẩm</h2>
+            <p class="section-subtitle">
+                Chi tiết hàm lượng Calo, Protein, Carbs, Fat và vi chất được kiểm định độc lập cho từng sản phẩm GreenBite
+            </p>
+
+            <!-- Filters -->
+            <div class="nutrition-filters">
+                <button type="button" class="nutrition-filter-btn active" data-filter="all">Tất cả sản phẩm</button>
+                <button type="button" class="nutrition-filter-btn" data-filter="eat-clean">Eat Clean / Giảm cân</button>
+                <button type="button" class="nutrition-filter-btn" data-filter="high-protein">Giàu Protein (Tập gym)</button>
+                <button type="button" class="nutrition-filter-btn" data-filter="vegan-keto">Keto / Thuần chay</button>
+            </div>
+
+            <!-- Nutrition Facts Grid -->
+            <div class="nutrition-grid" id="nutrition-facts-grid">
+                <!-- Rendered dynamically by calo.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       SECTION 3: PRE-BUILT HEALTHY MEAL PLANS
+       ════════════════════════════════════════════════════════ -->
+    <section class="meal-plans-section section-padding" id="meal-plans">
+        <div class="container">
+            <h2 class="section-title">⭐ Thực Đơn Mẫu Gợi Ý Chuẩn Calo</h2>
+            <p class="section-subtitle">
+                Các combo được chuyên gia dinh dưỡng GreenBite thiết kế sẵn theo từng mục tiêu thể trạng
+            </p>
+
+            <div class="meal-plans__grid">
+                <!-- Combo 1 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Giữ Dáng · Eat Clean</span>
+                        <h3 class="meal-plan-card__title">Sáng Tinh Gọn & Đẹp Da</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 325 kcal · 17.5g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🥣 45g Granola Siêu Hạt Mật Ong</li>
+                            <li class="meal-plan-card__item">🥛 100g Sữa chua Hy Lạp không đường</li>
+                            <li class="meal-plan-card__item">🍓 50g Dâu tây tươi cắt lát</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="lean-fit">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+
+                <!-- Combo 2 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Tăng Cơ · Pre-Workout</span>
+                        <h3 class="meal-plan-card__title">Năng Lượng Bứt Phá</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 480 kcal · 23.8g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🍫 1 Thanh Hạt Dinh Dưỡng Energy Bar</li>
+                            <li class="meal-plan-card__item">🍯 20g Bơ Hạt Hạnh Nhân Thuần Chay</li>
+                            <li class="meal-plan-card__item">🍌 1 Quả chuối tiêu tươi</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="gym-energy">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Văn Phòng · Không Béo</span>
+                        <h3 class="meal-plan-card__title">Bữa Xế Tỉnh Táo</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 195 kcal · 6.8g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🍪 2 Lát Bánh Biscotti Nguyên Cám (30g)</li>
+                            <li class="meal-plan-card__item">🥜 5 Hạt Macca Tây Nguyên sấy giòn</li>
+                            <li class="meal-plan-card__item">🍵 1 Tách trà xanh hoa cúc</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="office-snack">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       CTA BANNER
+       ════════════════════════════════════════════════════════ -->
+    <section class="cta-banner section-padding" id="contact">
+        <div class="container">
+            <div class="cta-banner__inner">
+                <h2 class="cta-banner__title">Ăn sạch lành mạnh — Bắt đầu ngay hôm nay!</h2>
+                <p class="cta-banner__desc">Đăng ký thành viên GreenBite để nhận cẩm nang Eat Clean 28 ngày và ưu đãi 10% đơn đầu tiên.</p>
+                <form class="cta-banner__form"
+                    onsubmit="event.preventDefault(); document.getElementById('toast').textContent='Đăng ký nhận cẩm nang thành công! 🎉'; document.getElementById('toast').classList.add('show'); setTimeout(()=>document.getElementById('toast').classList.remove('show'),2500);">
+                    <input type="email" class="cta-banner__input" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="cta-banner__btn">Nhận cẩm nang ngay</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Brand -->
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <span class="footer__logo-icon">🌿</span>
+                        GreenBite
+                    </div>
+                    <p class="footer__desc">
+                        Công ty TNHH Thực phẩm Xanh GreenBite<br>
+                        Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM<br>
+                        Hotline: 1900 6868 99
+                    </p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" aria-label="Shopee">🛍️</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer__heading">Liên kết nhanh</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html#home" class="footer__link">Trang chủ</a></li>
+                        <li><a href="index.html#products" class="footer__link">Sản phẩm</a></li>
+                        <li><a href="calo.html" class="footer__link">Bảng Calo</a></li>
+                        <li><a href="index.html#about" class="footer__link">Về chúng tôi</a></li>
+                        <li><a href="index.html#contact" class="footer__link">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="footer__heading">Hỗ trợ</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="footer__link">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="footer__link">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="footer__link">FAQ — Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment Methods -->
+                <div>
+                    <h4 class="footer__heading">Phương thức thanh toán</h4>
+                    <div class="footer__payment">
+                        <span class="footer__payment-icon">💳 MoMo</span>
+                        <span class="footer__payment-icon">🏦 VNPay</span>
+                        <span class="footer__payment-icon">💎 Visa</span>
+                        <span class="footer__payment-icon">📦 COD</span>
+                        <span class="footer__payment-icon">🏧 MasterCard</span>
+                    </div>
+                    <h4 class="footer__heading" style="margin-top: var(--space-xl)">Marketplace</h4>
+                    <div class="footer__payment">
+                        <span class="footer__payment-icon">🛒 Shopee Mall</span>
+                        <span class="footer__payment-icon">🏬 Lazada</span>
+                        <span class="footer__payment-icon">🎵 TikTok Shop</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 GreenBite. All rights reserved. Sống Lành — Ăn Sạch — Trọn Vị Tự Nhiên.
+                </p>
+                <div class="footer__bottom-links">
+                    <a href="#" class="footer__bottom-link">Điều khoản sử dụng</a>
+                    <a href="#" class="footer__bottom-link">Chính sách bảo mật</a>
+                    <a href="#" class="footer__bottom-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════════════════
+       CART DRAWER / SLIDE-OVER
+       ════════════════════════════════════════════════════════ -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="cart-drawer__header">
+            <div class="cart-drawer__title">
+                🛒 Giỏ Hàng <span class="cart-drawer__count-badge" id="cart-drawer-count">(0)</span>
+            </div>
+            <button class="cart-drawer__close" id="cart-drawer-close" aria-label="Đóng giỏ hàng">✕</button>
+        </div>
+
+        <div class="cart-drawer__body" id="cart-drawer-body">
+            <!-- Dynamically populated by script.js -->
+        </div>
+
+        <div class="cart-drawer__footer" id="cart-drawer-footer">
+            <div class="cart-drawer__summary">
+                <div class="cart-drawer__summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="cart-subtotal">0 ₫</span>
+                </div>
+                <div class="cart-drawer__summary-row">
+                    <span>Phí vận chuyển:</span>
+                    <span class="cart-drawer__free-shipping" id="cart-shipping">Miễn phí (Toàn quốc)</span>
+                </div>
+                <div class="cart-drawer__summary-divider"></div>
+                <div class="cart-drawer__summary-row cart-drawer__summary-row--total">
+                    <span>Tổng cộng:</span>
+                    <span class="cart-drawer__total" id="cart-total">0 ₫</span>
+                </div>
+            </div>
+
+            <button class="cart-drawer__checkout-btn" id="cart-checkout-btn">
+                Thanh toán ngay ➔
+            </button>
+            <p class="cart-drawer__guarantee">
+                🔒 Thanh toán an toàn · Giao hỏa tốc 2H · Đổi trả 7 ngày
+            </p>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+       UTILITIES: Scroll-to-top & Toast
+       ════════════════════════════════════════════════════════ -->
+    <button class="scroll-top" id="scroll-top" aria-label="Về đầu trang">↑</button>
+    <div class="toast" id="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="calo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GreenBite — Thực phẩm sạch, hữu cơ từ thiên nhiên. Granola, Biscotti, Energy Bar dinh dưỡng. Sống Lành - Ăn Sạch - Trọn Vị Tự Nhiên.">
+    <meta name="keywords" content="GreenBite, thực phẩm hữu cơ, granola, biscotti, energy bar, ăn sạch, dinh dưỡng">
+    <meta name="author" content="GreenBite">
+    <title>GreenBite — Sống Lành · Ăn Sạch · Trọn Vị Tự Nhiên</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Preconnect & Google Fonts: Plus Jakarta Sans (Modern & Youthful) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════════════════════
+       HEADER / NAVIGATION
+       ════════════════════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <!-- Logo -->
+            <a href="#home" class="logo" id="logo">
+                <img src="images/logo.jpg" alt="GreenBite Logo" class="logo__img">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav__list" id="nav-list">
+                    <li><a href="#home" class="nav__link active">Trang chủ</a></li>
+                    <li><a href="#products" class="nav__link">Sản phẩm</a></li>
+                    <li><a href="#calculator" class="nav__link">Bảng Calo</a></li>
+                    <li><a href="#about" class="nav__link">Về chúng tôi</a></li>
+                    <li><a href="#contact" class="nav__link">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header__actions">
+                <button class="search-toggle" id="search-toggle" aria-label="Tìm kiếm">🔍</button>
+                <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+                    🛒
+                    <span class="cart-btn__count" id="cart-count">0</span>
+                </button>
+                <button class="user-btn" id="user-btn" aria-label="Tài khoản">👤</button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-overlay__close" id="search-close" aria-label="Đóng">✕</button>
+        <div class="search-overlay__inner">
+            <input type="text" class="search-overlay__input" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════════════════ -->
+    <section class="hero section-padding" id="home">
+        <div class="container">
+            <div class="hero__inner">
+                <!-- Content -->
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span>🍃</span> 100% Organic & Tự Nhiên
+                    </div>
+                    <h1 class="hero__title">
+                        Dinh Dưỡng Lành<br>Cho Cuộc Sống <em>Xanh</em>
+                    </h1>
+                    <p class="hero__desc">
+                        Sống Lành — Ăn Sạch — Trọn Vị Tự Nhiên. Khám phá bộ sưu tập Granola, Biscotti và Energy Bar được
+                        chế biến 100% từ nguyên liệu hữu cơ, không chất bảo quản.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#products" class="btn btn--primary">
+                            🔍 Khám phá sản phẩm
+                        </a>
+                        <a href="#contact" class="btn btn--secondary">
+                            🛒 Đặt hàng ngay
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Media -->
+                <div class="hero__media">
+                    <div class="hero__image-wrapper">
+                        <img src="images/hero_banner.jpg" alt="GreenBite — Granola & Biscotti hữu cơ" loading="eager">
+                    </div>
+                    <!-- Floating Cards -->
+                    <div class="hero__float-card hero__float-card--top">
+                        <div class="float-card__label">Đánh giá</div>
+                        <div class="float-card__stars">⭐⭐⭐⭐⭐</div>
+                        <div class="float-card__value">4.9/5</div>
+                    </div>
+                    <div class="hero__float-card hero__float-card--bottom">
+                        <div class="float-card__label">Đã bán</div>
+                        <div class="float-card__value">12,500+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative -->
+        <svg class="hero__leaf hero__leaf--1" viewBox="0 0 100 100" fill="currentColor"
+            style="color: var(--clr-secondary)">
+            <path d="M50 5 C25 25, 5 50, 50 95 C95 50, 75 25, 50 5Z" />
+        </svg>
+        <svg class="hero__leaf hero__leaf--2" viewBox="0 0 100 100" fill="currentColor"
+            style="color: var(--clr-secondary)">
+            <path d="M50 5 C25 25, 5 50, 50 95 C95 50, 75 25, 50 5Z" />
+        </svg>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       FEATURED PRODUCTS
+       ════════════════════════════════════════════════════════ -->
+    <section class="products section-padding" id="products">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Danh mục sản phẩm nổi bật</h2>
+            <p class="section-subtitle animate-on-scroll">Tuyển chọn những sản phẩm dinh dưỡng tốt nhất từ thiên nhiên
+                cho sức khỏe của bạn</p>
+
+            <div class="products__grid">
+                <!-- Product 1: Granola -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/granola.jpg" alt="Granola Siêu Hạt Mật Ong" loading="lazy">
+                        <span class="product-card__badge">-15%</span>
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Granola</span>
+                        <h3 class="product-card__title">Granola Siêu Hạt Mật Ong (350g)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (128 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">120.000 ₫</span>
+                                <span class="product-card__price-old">141.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-granola">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Biscotti -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/biscotti.jpg" alt="Bánh Biscotti Nguyên Cám" loading="lazy">
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Biscotti</span>
+                        <h3 class="product-card__title">Bánh Biscotti Nguyên Cám (250g)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (96 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">95.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-biscotti">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Energy Bar -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/energy_bar.jpg" alt="Thanh Hạt Dinh Dưỡng Energy Bar" loading="lazy">
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Energy Bar</span>
+                        <h3 class="product-card__title">Thanh Hạt Dinh Dưỡng Energy Bar (10 thanh)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (74 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">150.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-energy-bar">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Hạt Macca Sấy Nứt Vỏ -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/macadamia.jpg" alt="Hạt Macca Sấy Nứt Vỏ Tây Nguyên" loading="lazy">
+                        <span class="product-card__badge">-14%</span>
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Hạt Dinh Dưỡng</span>
+                        <h3 class="product-card__title">Hạt Macca Sấy Nứt Vỏ Tây Nguyên (500g)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (142 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">185.000 ₫</span>
+                                <span class="product-card__price-old">215.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-macadamia">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Bơ Hạnh Nhân Thuần Chay -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/almond_butter.jpg" alt="Bơ Hạt Hạnh Nhân Thuần Chay" loading="lazy">
+                        <span class="product-card__badge product-card__badge--bestseller">Best Seller</span>
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Bơ Hạt Organic</span>
+                        <h3 class="product-card__title">Bơ Hạt Hạnh Nhân Thuần Chay (250g)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (88 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">135.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-almond-butter">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Yến Mạch Cán Dẹt Organic -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-card__image">
+                        <img src="images/rolled_oats.jpg" alt="Yến Mạch Cán Dẹt Tự Nhiên" loading="lazy">
+                        <span class="product-card__badge product-card__badge--new">Mới</span>
+                        <button class="product-card__wishlist" aria-label="Yêu thích">🤍</button>
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__category">Ngũ Cốc</span>
+                        <h3 class="product-card__title">Yến Mạch Cán Dẹt Tự Nhiên (500g)</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__stars">★★★★★</span>
+                            <span class="product-card__rating-text">5.0 (65 đánh giá)</span>
+                        </div>
+                        <div class="product-card__footer">
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">75.000 ₫</span>
+                            </div>
+                            <button class="product-card__add-btn" id="add-rolled-oats">
+                                🛒 Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       VALUE PROPOSITION / USP
+       ════════════════════════════════════════════════════════ -->
+    <section class="usp section-padding" id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Vì sao chọn GreenBite?</h2>
+            <p class="section-subtitle animate-on-scroll">Cam kết mang đến giá trị dinh dưỡng tốt nhất cho sức khỏe gia
+                đình bạn</p>
+
+            <div class="usp__grid">
+                <!-- USP 1 -->
+                <div class="usp-card animate-on-scroll">
+                    <div class="usp-card__icon">🌱</div>
+                    <h3 class="usp-card__title">100% Organic & Tự nhiên</h3>
+                    <p class="usp-card__desc">Nguyên liệu được tuyển chọn từ nông trại hữu cơ đạt chuẩn quốc tế, không
+                        thuốc trừ sâu, không biến đổi gen.</p>
+                </div>
+
+                <!-- USP 2 -->
+                <div class="usp-card animate-on-scroll">
+                    <div class="usp-card__icon">🚫</div>
+                    <h3 class="usp-card__title">Không đường tinh luyện</h3>
+                    <p class="usp-card__desc">Sử dụng mật ong nguyên chất và đường dừa tự nhiên thay thế, an toàn cho
+                        sức khỏe và thân thiện với người ăn kiêng.</p>
+                </div>
+
+                <!-- USP 3 -->
+                <div class="usp-card animate-on-scroll">
+                    <div class="usp-card__icon">🚀</div>
+                    <h3 class="usp-card__title">Giao hàng hỏa tốc 2H</h3>
+                    <p class="usp-card__desc">Giao hàng siêu tốc trong 2 giờ tại nội thành TP.HCM và Hà Nội. Miễn phí
+                        vận chuyển cho đơn từ 300.000 ₫.</p>
+                </div>
+
+                <!-- USP 4 -->
+                <div class="usp-card animate-on-scroll">
+                    <div class="usp-card__icon">🔄</div>
+                    <h3 class="usp-card__title">Đổi trả dễ dàng 7 ngày</h3>
+                    <p class="usp-card__desc">Chính sách đổi trả linh hoạt trong 7 ngày nếu sản phẩm không đúng mô tả
+                        hoặc bị lỗi trong quá trình vận chuyển.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       CALORIE & NUTRITION HUB INTRO
+       ════════════════════════════════════════════════════════ -->
+    <section class="calo-hero" id="calculator" style="padding-top: var(--space-3xl); padding-bottom: var(--space-3xl);">
+        <div class="container">
+            <div class="calo-hero__badge animate-on-scroll">
+                <span>🍃</span> Dinh Dưỡng Chuẩn Khoa Học
+            </div>
+            <h2 class="calo-hero__title animate-on-scroll">
+                Trung Tâm Tính Calo & Tra Cứu Dinh Dưỡng<br><em>Sản Phẩm GreenBite</em>
+            </h2>
+            <p class="calo-hero__desc animate-on-scroll">
+                Tự do tính toán chỉ số TDEE cá nhân, tự phối các món ăn vặt lành mạnh và kiểm soát chính xác lượng Calo
+                & Macro (Protein, Carbs, Fat, Fiber) cho bữa ăn Eat Clean chuẩn mục tiêu tăng cơ, giảm mỡ của bạn.
+            </p>
+            <div class="calo-quick-nav animate-on-scroll">
+                <a href="#tdee-calc" class="calo-quick-nav__link">⚡ 1. Tính TDEE Cá Nhân</a>
+                <a href="#builder" class="calo-quick-nav__link">🥗 2. Tự Tạo Bữa Ăn & Macro</a>
+                <a href="#meal-plans" class="calo-quick-nav__link">⭐ 3. Thực Đơn Mẫu Gợi Ý</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       1. CALORIE CALCULATOR (TDEE)
+       ════════════════════════════════════════════════════════ -->
+    <section class="calculator section-padding" id="tdee-calc">
+        <div class="container">
+            <div class="calculator__inner">
+                <!-- Info Side -->
+                <div class="calculator__info animate-on-scroll">
+                    <h2 class="section-title">Tính Calo Hàng Ngày</h2>
+                    <p class="section-subtitle">
+                        Khám phá nhu cầu năng lượng cá nhân và nhận gợi ý combo GreenBite phù hợp với mục tiêu dinh
+                        dưỡng của bạn.
+                    </p>
+                    <div class="calculator__features">
+                        <div class="calculator__feature">
+                            <span class="calculator__feature-icon">📊</span>
+                            <span>Dựa trên công thức Harris-Benedict chính xác</span>
+                        </div>
+                        <div class="calculator__feature">
+                            <span class="calculator__feature-icon">🎯</span>
+                            <span>Gợi ý combo sản phẩm phù hợp với bạn</span>
+                        </div>
+                        <div class="calculator__feature">
+                            <span class="calculator__feature-icon">⚡</span>
+                            <span>Tính toán tức thì, không cần đăng ký</span>
+                        </div>
+                        <div class="calculator__feature">
+                            <span class="calculator__feature-icon">💚</span>
+                            <span>Miễn phí 100%, không giới hạn lượt tính</span>
+                        </div>
+                        <div class="calculator__feature" style="margin-top: var(--space-sm);">
+                            <a href="#builder" class="btn btn--primary btn--sm"
+                                style="box-shadow: 0 4px 14px rgba(45,106,79,0.25);">
+                                🥗 Tự phối món & Tính Calo ngay bên dưới ↓
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Widget -->
+                <div class="calc-widget animate-on-scroll">
+                    <h3 class="calc-widget__title">⚡ Tính ngay TDEE của bạn</h3>
+                    <form class="calc-widget__form" id="calc-form">
+                        <div class="form-group">
+                            <label for="calc-gender">Giới tính</label>
+                            <select id="calc-gender" required>
+                                <option value="" disabled selected>Chọn giới tính</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="calc-age">Tuổi</label>
+                                <input type="number" id="calc-age" placeholder="VD: 25" min="10" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-weight">Cân nặng (kg)</label>
+                                <input type="number" id="calc-weight" placeholder="VD: 60" min="30" max="250" step="0.1"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc-height">Chiều cao (cm)</label>
+                            <input type="number" id="calc-height" placeholder="VD: 170" min="100" max="250" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc-activity">Mức độ vận động</label>
+                            <select id="calc-activity" required>
+                                <option value="" disabled selected>Chọn mức độ vận động</option>
+                                <option value="sedentary">Ít vận động (ngồi văn phòng)</option>
+                                <option value="light">Nhẹ nhàng (tập 1-3 ngày/tuần)</option>
+                                <option value="moderate">Trung bình (tập 3-5 ngày/tuần)</option>
+                                <option value="active">Năng động (tập 6-7 ngày/tuần)</option>
+                                <option value="very_active">Rất năng động (vận động viên)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="calc-widget__submit">
+                            🧮 Tính Calo ngay
+                        </button>
+                    </form>
+
+                    <!-- Result -->
+                    <div class="calc-result" id="calc-result">
+                        <div class="calc-result__calories">
+                            <div class="calc-result__number" id="calc-number">0</div>
+                            <div class="calc-result__label">kcal / ngày (TDEE)</div>
+                        </div>
+                        <div class="calc-result__recommendation" id="calc-recommendation">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       INTERACTIVE MEAL & PRODUCT CALORIE BUILDER
+       ════════════════════════════════════════════════════════ -->
+    <section class="section-padding" id="builder" style="background: var(--clr-white);">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">🥗 Tự Tạo Khẩu Phần & Tính Calo Bữa Ăn</h2>
+            <p class="section-subtitle animate-on-scroll">
+                Tick chọn các sản phẩm bạn muốn ăn và điều chỉnh khối lượng — Bộ tính sẽ phân tích chi tiết lượng Calo
+                và tỷ lệ Macro ngay lập tức!
+            </p>
+
+            <div class="builder-layout">
+                <!-- Selection Column -->
+                <div class="builder-selection">
+                    <!-- Group 1: GreenBite Products -->
+                    <div class="builder-group animate-on-scroll">
+                        <h3 class="builder-group__title">
+                            🌿 Sản phẩm dinh dưỡng GreenBite
+                        </h3>
+                        <p class="builder-group__subtitle">Chọn các món bạn muốn thêm vào bữa ăn hôm nay:</p>
+                        <div class="builder-cards-grid" id="builder-products-list">
+                            <!-- Populated dynamically by calo.js -->
+                        </div>
+                    </div>
+
+                    <!-- Group 2: Healthy Add-on Toppings -->
+                    <div class="builder-group animate-on-scroll">
+                        <h3 class="builder-group__title">
+                            🍓 Món ăn kèm lành mạnh (Gợi ý phối hợp)
+                        </h3>
+                        <p class="builder-group__subtitle">Kết hợp thêm cùng sữa hạt, sữa chua hoặc hoa quả tươi:</p>
+                        <div class="builder-cards-grid" id="builder-toppings-list">
+                            <!-- Populated dynamically by calo.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sticky Macro Dashboard -->
+                <div class="macro-dashboard-wrap">
+                    <div class="macro-dashboard animate-on-scroll">
+                        <div class="macro-dashboard__header">
+                            <div class="macro-dashboard__label">Tổng Năng Lượng Khẩu Phần</div>
+                            <div class="macro-dashboard__calories-wrap">
+                                <span class="macro-dashboard__calories" id="macro-total-calories">0</span>
+                                <span class="macro-dashboard__cal-unit">kcal</span>
+                            </div>
+                        </div>
+
+                        <!-- Calorie Goal Target -->
+                        <div class="macro-goal">
+                            <div class="macro-goal__select-row">
+                                <span>🎯 Mục tiêu bữa ăn:</span>
+                                <select class="macro-goal__select" id="macro-goal-select">
+                                    <option value="200">Bữa xế nhẹ nhàng (~200 kcal)</option>
+                                    <option value="350" selected>Bữa sáng Eat Clean (~350 kcal)</option>
+                                    <option value="450">Bữa phụ trước tập Gym (~450 kcal)</option>
+                                    <option value="550">Bữa chính giàu Protein (~550 kcal)</option>
+                                </select>
+                            </div>
+                            <div class="macro-goal__bar-bg">
+                                <div class="macro-goal__bar-fill" id="macro-goal-fill" style="width: 0%;"></div>
+                            </div>
+                            <div class="macro-goal__status" id="macro-goal-status">Đang tính toán...</div>
+                        </div>
+
+                        <!-- Macro Ratio Distribution Bar -->
+                        <div class="macro-ratio-bar">
+                            <div class="macro-ratio-bar__seg--protein" id="macro-seg-protein" style="width: 33%;"
+                                title="Protein"></div>
+                            <div class="macro-ratio-bar__seg--carbs" id="macro-seg-carbs" style="width: 33%;"
+                                title="Carbs"></div>
+                            <div class="macro-ratio-bar__seg--fat" id="macro-seg-fat" style="width: 34%;"
+                                title="Healthy Fat"></div>
+                        </div>
+
+                        <!-- Macro Grid: 4 Cards -->
+                        <div class="macro-grid">
+                            <div class="macro-card macro-card--protein">
+                                <div class="macro-card__name">🥩 Protein</div>
+                                <div class="macro-card__value" id="macro-val-protein">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-protein">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--carbs">
+                                <div class="macro-card__name">🍞 Carbs (Chậm)</div>
+                                <div class="macro-card__value" id="macro-val-carbs">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-carbs">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--fat">
+                                <div class="macro-card__name">🥑 Chất béo tốt</div>
+                                <div class="macro-card__value" id="macro-val-fat">0g</div>
+                                <div class="macro-card__pct" id="macro-pct-fat">0% calo</div>
+                            </div>
+                            <div class="macro-card macro-card--fiber">
+                                <div class="macro-card__name">🌾 Chất xơ</div>
+                                <div class="macro-card__value" id="macro-val-fiber">0g</div>
+                                <div class="macro-card__pct">Tốt cho ruột</div>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Actions -->
+                        <div class="macro-dashboard__actions">
+                            <button type="button" class="btn-add-combo" id="btn-add-combo">
+                                🛒 Thêm combo này vào giỏ hàng
+                            </button>
+                            <button type="button" class="btn-reset-builder" id="btn-reset-builder">
+                                🔄 Làm mới bộ tính
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       PRE-BUILT HEALTHY MEAL PLANS
+       ════════════════════════════════════════════════════════ -->
+    <section class="meal-plans-section section-padding" id="meal-plans">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">⭐ Thực Đơn Mẫu Gợi Ý Chuẩn Calo</h2>
+            <p class="section-subtitle animate-on-scroll">
+                Các combo được chuyên gia dinh dưỡng GreenBite thiết kế sẵn theo từng mục tiêu thể trạng
+            </p>
+
+            <div class="meal-plans__grid">
+                <!-- Combo 1 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Giữ Dáng · Eat Clean</span>
+                        <h3 class="meal-plan-card__title">Sáng Tinh Gọn & Đẹp Da</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 325 kcal · 17.5g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🥣 45g Granola Siêu Hạt Mật Ong</li>
+                            <li class="meal-plan-card__item">🥛 100g Sữa chua Hy Lạp không đường</li>
+                            <li class="meal-plan-card__item">🍓 50g Dâu tây tươi cắt lát</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="lean-fit">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+
+                <!-- Combo 2 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Tăng Cơ · Pre-Workout</span>
+                        <h3 class="meal-plan-card__title">Năng Lượng Bứt Phá</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 480 kcal · 23.8g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🍫 1 Thanh Hạt Dinh Dưỡng Energy Bar</li>
+                            <li class="meal-plan-card__item">🍯 20g Bơ Hạt Hạnh Nhân Thuần Chay</li>
+                            <li class="meal-plan-card__item">🍌 1 Quả chuối tiêu tươi</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="gym-energy">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="meal-plan-card animate-on-scroll">
+                    <div>
+                        <span class="meal-plan-card__tag">Văn Phòng · Không Béo</span>
+                        <h3 class="meal-plan-card__title">Bữa Xế Tỉnh Táo</h3>
+                        <div class="meal-plan-card__cal-badge">⚡ 195 kcal · 6.8g Protein</div>
+                        <ul class="meal-plan-card__items">
+                            <li class="meal-plan-card__item">🍪 2 Lát Bánh Biscotti Nguyên Cám (30g)</li>
+                            <li class="meal-plan-card__item">🥜 5 Hạt Macca Tây Nguyên sấy giòn</li>
+                            <li class="meal-plan-card__item">🍵 1 Tách trà xanh hoa cúc</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="meal-plan-card__btn" data-plan="office-snack">
+                        Nạp combo này vào bộ tính ➔
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       CUSTOMER TESTIMONIALS
+       ════════════════════════════════════════════════════════ -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Khách hàng nói gì về GreenBite?</h2>
+            <p class="section-subtitle animate-on-scroll">Hơn 12,500+ khách hàng tin tưởng lựa chọn GreenBite cho bữa ăn
+                lành mạnh mỗi ngày</p>
+
+            <div class="testimonials__grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <span class="testimonial-card__quote">"</span>
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">
+                        "Granola GreenBite là sản phẩm tuyệt vời nhất mình từng thử! Hương vị tự nhiên, giòn tan, mật
+                        ong thơm lừng. Con gái mình cũng mê lắm, mỗi sáng đều đòi ăn Granola với sữa chua."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">TL</div>
+                        <div>
+                            <div class="testimonial-card__name">Thanh Lan</div>
+                            <div class="testimonial-card__role">Mẹ bỉm sữa, Hà Nội</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <span class="testimonial-card__quote">"</span>
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">
+                        "Mình tập gym nên cần snack lành mạnh. Energy Bar của GreenBite vừa tiện, vừa ngon, lại không lo
+                        đường tinh luyện. Ăn trước và sau tập đều hợp. Sẽ mua dài dài!"
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">MK</div>
+                        <div>
+                            <div class="testimonial-card__name">Minh Khang</div>
+                            <div class="testimonial-card__role">Gym-goer, TP.HCM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card animate-on-scroll">
+                    <span class="testimonial-card__quote">"</span>
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">
+                        "Biscotti nguyên cám thơm lắm, chấm cà phê buổi sáng thì tuyệt cú mèo! Đóng gói đẹp, mình hay
+                        mua làm quà tặng bạn bè. Giao hàng nhanh, đóng gói cẩn thận."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">HY</div>
+                        <div>
+                            <div class="testimonial-card__name">Hạnh Vy</div>
+                            <div class="testimonial-card__role">Food Blogger, Đà Nẵng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       CTA / NEWSLETTER BANNER
+       ════════════════════════════════════════════════════════ -->
+    <section class="cta-banner section-padding" id="contact">
+        <div class="container">
+            <div class="cta-banner__inner">
+                <h2 class="cta-banner__title">Đăng ký nhận ưu đãi độc quyền</h2>
+                <p class="cta-banner__desc">Giảm ngay 10% cho đơn hàng đầu tiên khi đăng ký email nhận tin từ GreenBite.
+                </p>
+                <form class="cta-banner__form"
+                    onsubmit="event.preventDefault(); document.getElementById('toast').textContent='Đăng ký thành công! 🎉'; document.getElementById('toast').classList.add('show'); setTimeout(()=>document.getElementById('toast').classList.remove('show'),2500);">
+                    <input type="email" class="cta-banner__input" placeholder="Email của bạn..." required>
+                    <button type="submit" class="cta-banner__btn">Đăng ký ngay</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Brand -->
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <span class="footer__logo-icon">🌿</span>
+                        GreenBite
+                    </div>
+                    <p class="footer__desc">
+                        Công ty TNHH Thực phẩm Xanh GreenBite<br>
+                        Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM<br>
+                        Hotline: 1900 6868 99
+                    </p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" aria-label="Shopee">🛍️</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer__heading">Liên kết nhanh</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home" class="footer__link">Trang chủ</a></li>
+                        <li><a href="#products" class="footer__link">Sản phẩm</a></li>
+                        <li><a href="#calculator" class="footer__link">Bảng Calo</a></li>
+                        <li><a href="#about" class="footer__link">Về chúng tôi</a></li>
+                        <li><a href="#contact" class="footer__link">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="footer__heading">Hỗ trợ</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="footer__link">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="footer__link">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="footer__link">FAQ — Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment Methods -->
+                <div>
+                    <h4 class="footer__heading">Phương thức thanh toán</h4>
+                    <div class="footer__payment">
+                        <span class="footer__payment-icon">💳 MoMo</span>
+                        <span class="footer__payment-icon">🏦 VNPay</span>
+                        <span class="footer__payment-icon">💎 Visa</span>
+                        <span class="footer__payment-icon">📦 COD</span>
+                        <span class="footer__payment-icon">🏧 MasterCard</span>
+                    </div>
+                    <h4 class="footer__heading" style="margin-top: var(--space-xl)">Marketplace</h4>
+                    <div class="footer__payment">
+                        <span class="footer__payment-icon">🛒 Shopee Mall</span>
+                        <span class="footer__payment-icon">🏬 Lazada</span>
+                        <span class="footer__payment-icon">🎵 TikTok Shop</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 GreenBite. All rights reserved. Sống Lành — Ăn Sạch — Trọn Vị Tự Nhiên.
+                </p>
+                <div class="footer__bottom-links">
+                    <a href="#" class="footer__bottom-link">Điều khoản sử dụng</a>
+                    <a href="#" class="footer__bottom-link">Chính sách bảo mật</a>
+                    <a href="#" class="footer__bottom-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════════════════
+       CART DRAWER / SLIDE-OVER
+       ════════════════════════════════════════════════════════ -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="cart-drawer__header">
+            <div class="cart-drawer__title">
+                🛒 Giỏ Hàng <span class="cart-drawer__count-badge" id="cart-drawer-count">(0)</span>
+            </div>
+            <button class="cart-drawer__close" id="cart-drawer-close" aria-label="Đóng giỏ hàng">✕</button>
+        </div>
+
+        <div class="cart-drawer__body" id="cart-drawer-body">
+            <!-- Dynamically populated by script.js -->
+        </div>
+
+        <div class="cart-drawer__footer" id="cart-drawer-footer">
+            <div class="cart-drawer__summary">
+                <div class="cart-drawer__summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="cart-subtotal">0 ₫</span>
+                </div>
+                <div class="cart-drawer__summary-row">
+                    <span>Phí vận chuyển:</span>
+                    <span class="cart-drawer__free-shipping" id="cart-shipping">Miễn phí (Toàn quốc)</span>
+                </div>
+                <div class="cart-drawer__summary-divider"></div>
+                <div class="cart-drawer__summary-row cart-drawer__summary-row--total">
+                    <span>Tổng cộng:</span>
+                    <span class="cart-drawer__total" id="cart-total">0 ₫</span>
+                </div>
+            </div>
+
+            <button class="cart-drawer__checkout-btn" id="cart-checkout-btn">
+                Thanh toán ngay ➔
+            </button>
+            <p class="cart-drawer__guarantee">
+                🔒 Thanh toán an toàn · Giao hỏa tốc 2H · Đổi trả 7 ngày
+            </p>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+       UTILITIES: Scroll-to-top & Toast
+       ════════════════════════════════════════════════════════ -->
+    <button class="scroll-top" id="scroll-top" aria-label="Về đầu trang">↑</button>
+    <div class="toast" id="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="calo.js"></script>
+</body>
+
+</html>
